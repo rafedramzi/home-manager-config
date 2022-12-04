@@ -1,0 +1,18 @@
+name: 'rigel'
+version: '1.0.0'
+license: 'MIT'
+author: 'Alexander Keliris'
+url: 'https://github.com/Rigellute/rigel'
+description: ''
+colorschemes:
+  - name: rigel
+    background: 'dark'
+    palette: rigel
+airline: 
+  - name: rigel 
+    palette: rigel 
+    style: rigel 
+lightline: 
+  - name: rigel 
+    palette: rigel 
+    style: rigel 

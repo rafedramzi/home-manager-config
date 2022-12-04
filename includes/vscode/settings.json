@@ -1,0 +1,175 @@
+{
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "C_Cpp.errorSquiggles": "Enabled",
+  "C_Cpp.loggingLevel": "Warning",
+  "cSpell.diagnosticLevel": "Hint",
+  "[c]": {
+    "editor.tabSize": 4
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.formatOnSave": true
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "breadcrumbs.enabled": true,
+  "cSpell.showStatus": false,
+  "cSpell.userWords": [
+    "authv",
+    "bukalapak",
+    "devs",
+    "ecom",
+    "extendee",
+    "firestore",
+    "higanbana",
+    "iban",
+    "Idxs",
+    "Isito",
+    "Microservice",
+    "proto",
+    "protobuf",
+    "protoc",
+    "protoimpl",
+    "protoreflect"
+  ],
+  "cmake.configureOnOpen": true,
+  "code-runner.enableAppInsights": false,
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,vendor,__tests__,.build}/**/*",
+  "dart.allowAnalytics": false,
+  "dart.checkForSdkUpdates": false,
+  "debug.javascript.usePreview": true,
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": true
+  },
+  "editor.fontFamily": "'Cascadia Code', 'monaco', 'Monoid', 'Noto Color Emoji', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineNumbers": "on",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.selectionClipboard": false,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+  "eslint.packageManager": "pnpm",
+  "explorer.autoReveal": false,
+  "files.associations": {
+    "*.js.map": "json"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "gitlens.advanced.telemetry.enabled": false,
+  "go.autocompleteUnimportedPackages": true,
+  "go.inferGopath": true,
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true,
+    "documentLink": true,
+    "format": true
+  },
+  "go.useLanguageServer": true,
+  "java.semanticHighlighting.enabled": true,
+  "julia.enableTelemetry": false,
+  "languageServerHaskell.hieExecutablePath": "/usr/bin/hie-wrapper",
+  "npm.packageManager": "yarn",
+  "python.languageServer": "Default",
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "reek": {
+      "useBundler": false
+    },
+    "rubocop": {
+      "useBundler": false
+    }
+  },
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.diagnostics.disabled": [
+    "macro-error"
+  ],
+  "rust-analyzer.inlayHints.enable": false,
+  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
+  "rust-client.channel": "nightly",
+  "rust.all_features": true,
+  "rust.clippy_preference": "on",
+  "sync.gist": "818e1cf6f79000fa7d7462a3dbfe46cd",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.integrated.rendererType": "dom",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vscode-neovim.neovimPath": "/usr/bin/nvim",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.menuBarVisibility": "toggle",
+  "window.restoreFullscreen": true,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#159b11",
+    "editor.selectionHighlightBackground": "#159b11"
+  },
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.sideBar.location": "right",
+  "editor.formatOnSave": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "rust-client.engine": "rust-analyzer",
+  "rust.rust-analyzer": {
+    "releaseTag": "nightly",
+    "path": "/usr/bin/rust-analyzer"
+    // "path": "~/.local/bin/rust-analyzer-linux"
+  },
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "workbench.colorTheme": "Panda Syntax",
+  "go.lintTool": "golangci-lint",
+  "editor.bracketPairColorization.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[proto]": {
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
+  },
+  "go.buildTags": "integration",
+  "go.testTags": "integration",
+  "window.zoomLevel": -1,
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Firefox - Profile Manager
+Type=Application
+Icon=firefox
+Terminal=false
+X-MultipleArgs=false
+Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;
+Exec=env LIBVA_DRIVER_NAME=nvidia MOZ_DISABLE_RDD_SANDBOX=1 __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/bin/firefox --ProfileManager

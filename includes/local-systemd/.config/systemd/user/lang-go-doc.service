@@ -1,0 +1,11 @@
+[Unit]
+Description=Go Programming language Documentation
+Documentation=https://go.dev
+#After=display-manager.service
+
+[Service]
+ExecStart=%h/Projects/data/go/bin/godoc -http=:6060
+Restart=always
+
+[Install]
+WantedBy=default.target

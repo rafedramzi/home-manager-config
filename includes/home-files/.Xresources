@@ -1,0 +1,149 @@
+!------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+! first two color-window were a013191c
+! a6 = 65% amount of black needed over white for white to be a 7 contrast score
+! b3 = 70%
+! 80 = 50%
+
+!!rofi.line-margin: 20
+!!rofi.fullscreen: true
+!!rofi.color-enabled: true
+!!rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
+!!rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #E918D8
+!!rofi.color-urgent: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
+!!rofi.color-active: argb:00000000, #E918D8, argb:00000000, argb:00000000, #e29a49
+!!rofi.font: TamzenForPowerline:antialias=true 14
+!!rofi.eh: 2
+!!rofi.separator-style: solid
+!!rofi.hide-scrollbar: true
+!!rofi.lines: 7
+!!rofi.width: 50
+!!rofi.padding: 200
+!!rofi.bw: 0
+!!rofi.auto-select: false
+!!rofi.fuzzy: true
+!!rofi.scroll-method: 1
+!!rofi.window-format: {t}
+
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+Xft.autohint:   1
+! Xft.dpi:        96
+Xft.lcdfilter:  lcddefault
+Xft.hinting: 1
+! Xft.hintstyle:  hintfull
+Xft.hintstyle: hintslight
+Xft.antialias: 1
+Xft.rgba: rgb
+
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+!-------------------------------------------------------------------------------
+URxvt.modifier: mod1
+URxvt*loginShell: true
+URxvt.borderless: true
+URxvt*dynamicColors: on
+URxvt.geometry: 90x20
+URxvt.internalBorder: 30
+URxvt.lineSpace: 1
+URxvt.saveLines: 0
+URxvt*termName: rxvt-unicode-256color
+URxvt.transparent: false
+URxvt.visualBell: false
+
+! disable ctrl+shift binding
+URxvt.iso14755:             false
+URxvt.iso14755_52:          false
+
+! Disable Perl extension
+! If you do not use the Perl extension features, you can improve the security
+! and speed by disabling Perl extensions completely.
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+
+!! Fonts
+URxvt.font: xft:TamzenForPowerline:antialias=true:size=14
+URxvt*boldFont: xft:TamzenForPowerline:antialias=true:size=14
+URxvt.allow_bold:           false
+URxvt*boldMode:             true
+! Fix font space
+URxvt*letterSpace:          -1
+
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         false
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
+
+
+!! Dew Adventure
+*background:  #46423a
+*foreground:  #fcedc5
+*color0:  #62604e
+*color1:  #ff5a49
+*color2:  #4edc35
+*color3:  #e0c735
+*color4:  #9dbcff
+*color5:  #ff7ef1
+*color6:  #83d0df
+*color7:  #e0c1b5
+*color8:  #6e5a5d
+*color9:  #ff9b35
+*color10:  #88ea6f
+*color11:  #ffd035
+*color12:  #cec8ff
+*color13:  #ff9fff
+*color14:  #6be7c5
+*color15:  #e0d5c5
+
+

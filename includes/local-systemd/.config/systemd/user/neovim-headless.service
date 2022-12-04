@@ -1,0 +1,10 @@
+[Unit]
+Description=Run neovim headless
+
+[Service]
+Type=simple
+Environment=NVIM_SOCK=%h/.local/nvim.sock
+ExecStart=%h/scripts/run-neovim-headless
+
+[Install]
+WantedBy=default.target

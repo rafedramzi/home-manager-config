@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+SOCK_FOLDER="${SOCK_FOLDER:-$HOME/.local/}"
+NVIM_SOCK="${NVIM_SOCK:-$SOCK_FOLDER/nvimsock}"
+
+if [ -e "$NVIM_SOCK" ]; then
+	echo "Listening socket $NVIM_SOCK already exists"
+	ps ax | grep nvim
+	return 1
+fi
+
+export NVIM_LISTEN_ADDRESS=$NVIM_SOCK
+nvim --headless </dev/null >/dev/null 2>&1

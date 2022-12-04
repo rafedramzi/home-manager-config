@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre&display=swap");
+:root {
+  --backgroundDark: #001a25;
+  --foreground: #e6e6dc;
+  --background: #002635;
+
+  /* # black */
+  --color0: #00384d;
+  --color8: #517f8d;
+
+  /* # red */
+  --color1: #c43060;
+  --color9: #ff5a67;
+
+  /* # green */
+  --color2: #7fc06e;
+  --color10: #9cf087;
+
+  /* # yellow */
+  --color3: #f08e48;
+  --color11: #ffcc1b;
+
+  /* # blue */
+  --color4: #1c8db2;
+  --color12: #7eb2dd;
+
+  /* # magenta */
+  --color5: #c694ff;
+  --color13: #fb94ff;
+
+  /* # cyan */
+  --color6: #00cccc;
+  --color14: #00ffff;
+
+  /* # white */
+  --color7: #77929e;
+  --color15: #b7cff9;
+}
+
+html {
+  color: var(--background);
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  font-family: "Proza Libre", sans-serif;
+  background-color: var(--foreground);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color1);
+}
+
+.starfield {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+}
+
+#starfield {
+  width: 1px;
+  height: 1px;
+  border-radius: 1px;
+}
+
+#starfield-medium {
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+#starfield-large {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.container {
+  background-color: var(--background);
+  color: var(--foreground);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-center {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 1rem;
+}
+
+.svg {
+  max-height: 60vh;
+  z-index: 0;
+  margin-bottom: 1rem;
+}
+
+.lead-text {
+  margin: 0 5%;
+}
+
+.article-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70rem;
+  padding: 2.625rem 1.3125rem;
+}
+
+.footer-wrapper {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 0.1rem 0;
+}
+
+#palette-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2.625rem 1.3125rem;
+  z-index: 1;
+  background-color: var(--background);
+}
+
+.palette {
+  background-color: white;
+  color: var(--background);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.palette-item {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+.colour {
+  height: 4rem;
+  margin: 0 0.5rem;
+  width: 2.47rem;
+}
+
+.colour-title {
+  align-self: center;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+b,
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  letter-spacing: -0.1rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 2.2rem;
+  letter-spacing: -0.08rem;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 1.8rem;
+  letter-spacing: -0.05rem;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1140px) {
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

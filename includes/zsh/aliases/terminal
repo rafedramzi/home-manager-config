@@ -1,0 +1,5 @@
+#alias ls=exa
+alias npm=pnpm
+alias ec=emacsclient
+alias nvr="nvr --servername $HOME/.local/nvim.sock"
+#alias nvim-qt="nvim-qt --server $HOME/.local/nvim.sock"

@@ -1,0 +1,10 @@
+export SOCK_FOLDER=$HOME/.local
+export NVIM_SOCK=$SOCK_FOLDER/nvim.sock
+#$export NVIM_LISTEN_ADDRESS=$SOCK_FOLDER/nvim.sock
+export SSH_AUTH_SOCK=/run/user/1000/ssh-agent.socket
+# COLORIZE LESS OUTPUT
+export BAT_THEME=zenburn
+#export MANPAGER="sh -c 'col -bx | bat -l man'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export PATH="$HOME/bin:$PATH"

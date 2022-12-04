@@ -1,0 +1,47 @@
+export EDITOR=nvim
+#{{{ ETC
+export JUPYTERLAB_DIR=$HOME/Projects/jupyter/lab
+export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
+export JUPYTERNOTEBOOK_DIR=$HOME/Projects/jupyter/notebook
+export PATH="$HOME/.emacs.d/bin:$PATH"
+#}}}
+#{{{FLUTTER
+export PATH="$PATH:$HOME/Projects/SDK/flutter/bin"
+#}}}
+#{{{ GOLANG
+export GOPATH="$HOME/Projects/data/go"
+#export GOSUMDB=https://sum.golang.org
+export PATH="$PATH:$GOPATH/bin"
+#}}}
+#{{{RUST
+export PATH="$HOME/.cargo/bin:$PATH"
+#}}}
+### NODE BIN {
+export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/.pnpm/bin"
+###}
+#### OTHERS {
+export PATH="$PATH:/opt/chef-workstation/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+#### }
+#### PYTHON {
+
+#}
+#
+#{{{ BUILD Tools
+## Don't use all my cores please .... :D
+export MAKEFLAGS='-j 7'
+# }}}
+export PATH="$HOME/.local/bin:$PATH"
+export PNPM_HOME="/home/pwyll/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+#export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
+#alias docker=podman
+#
+export PATH="$HOME/bin:$PATH"
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+export PATH="${PATH}:${HOME}/.krew/bin"
+if [ -e /home/pwyll/.nix-profile/etc/profile.d/nix.sh ]; then . /home/pwyll/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

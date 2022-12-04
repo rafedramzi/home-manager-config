@@ -1,0 +1,17 @@
+set selection-clipboard clipboard
+set first-page-column 1:1
+set page-padding 3
+
+# {{{
+set font "inconsolata normal 12"
+
+set recolor-lightcolor          "#193549"
+set recolor-darkcolor           "#C7C7C7"
+
+set recolor-keephue             "false"
+set recolor true
+
+# }}}
+
+set database sqlite
+

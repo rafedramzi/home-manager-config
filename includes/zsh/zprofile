@@ -1,0 +1,6 @@
+export GPG_TTY=$(tty)
+eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

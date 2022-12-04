@@ -1,0 +1,4 @@
+[build]
+rustc-wrapper = "/usr/bin/sccache"
+
+

@@ -1,0 +1,29 @@
+- joplin appiamge
+- bitwarden appimage
+- configure ripgrep
+- find ways to install these .config files
+  - [hacks] [proper config] name
+  - [x]     [ ]             alacritty/
+  - [x]     [ ]             cargo/
+  - [x]     [ ]             containers/
+  - [x]     [ ]             dunst/
+  - [x]     [ ]             gdb/
+  - [x]     [ ]             i3/
+  - [x]     [ ]             kitty/
+  - [x]     [ ]             nvim/
+  - [x]     [ ]             picom/
+  - [x]     [ ]             rofi/
+  - [x]     [ ]             scripts/
+  - [x]     [ ]             starship/
+  - [x]     [ ]             sway/
+  - [x]     [ ]             tmux/
+  - [x]     [ ]             zathura/
+  - [x]     [ ]             zsh/
+  - [ ]     [ ]             home-files/
+  - [ ]     [ ]             local-systemd
+  - [ ]     [ ]             x11/
+  - [ ]     [ ]             xresources/
+- tidy up alias, make sure it adhere to community standard
+- ports aur installed packages to home-manager
+- ports pacman installed packges to home-mangaer
+- find ways to configure /etc/systemd things

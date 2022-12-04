@@ -1,0 +1,4 @@
+[kubernetes]
+format = '[⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
+disabled = false
+detect_files = ['k8s']
