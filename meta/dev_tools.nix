@@ -43,8 +43,8 @@
       pkgsUnstable.protoc-gen-connect-go
       pkgsUnstable.protoc-gen-twirp_swagger
 ] ++ [
-    pkgsUnstable.neovide
-    pkgsUnstable.neovim
+    #pkgsUnstable.neovide
+    #pkgsUnstable.neovim
 ] ++ [
     pkgsUnstable.buildpack
     pkgsUnstable.webtorrent_desktop

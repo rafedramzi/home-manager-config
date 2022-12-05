@@ -68,6 +68,13 @@ in
       share = true;
       ignoreSpace = true;
     };
+    oh-my-zsh = {
+      # NOTE the part that we're intersted in is only
+      # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/key-bindings.zsh
+      # why enable full zsh then? laziness :D
+      enable = true;
+      # plugins = [ "key-bindings" ];
+    };
     # zshrc
     initExtra = "";
     defaultKeymap = "emacs";
@@ -232,9 +239,6 @@ in
     ".config/zathura/" = {
       source = ./includes/zathura;
     };
-    ".tmux.conf" = {
-      source = ./includes/tmux;
-    };
   };
 
   home.packages = [ ]
@@ -246,4 +250,25 @@ in
     ++ import ./meta/nix_tools.nix importDeps
     ++ import ./meta/pl.nix importDeps
     ++ import ./meta/terminal.nix importDeps;
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+  programs.keychain = {
+    enable = true;
+    enableXsessionIntegration = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+  xsession = {
+    enable = true;
+    # initExtra = readFile ./includes/xsession/xsession;
+    numlock.enable = true;
+    windowManager.i3 = {
+      package = pkgs.i3;
+      enable = true;
+      extraConfig = readFile ./includes/i3/config;
+    };
+  };
 }
