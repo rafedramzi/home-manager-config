@@ -1,10 +1,17 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
+
 with builtins;
 let
-  pkgsUnstable = import <nixpkgs-unstable>;
+  pkgsUnstable = (import <nixpkgs-unstable> { });
+
   importDeps = { pkgs = pkgs; pkgsUnstable = pkgs; };
 in
 {
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "vscode"
+    "postman"
+  ];
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "pwyll";
@@ -94,92 +101,16 @@ in
   programs.tmux = {
     enable = true;
     extraConfig = readFile ./includes/tmux/tmux.conf;
+    plugins = with pkgs; [
+      {
+        plugin = tmuxPlugins.resurrect;
+      }
+    ];
   };
 
 
   programs.vscode = {
-    enable = false;
-    extensions = with pkgsUnstable; [
-      aaron-bond.better-comments
-      ahmadawais.shades-of-purple
-      alefragnani.Bookmarks
-      alefragnani.project-manager
-      attilabuti.vscode-mjml
-      BazelBuild.vscode-bazel
-      bufbuild.vscode-buf
-      christian-kohler.path-intellisense
-      crystal-lang-tools.crystal-lang
-      Dart-Code.dart-code
-      Dart-Code.flutter
-      DavidAnson.vscode-markdownlint
-      dbaeumer.vscode-eslint
-      dhedgecock.radical-vscode
-      dracula-theme.theme-dracula
-      dzannotti.vscode-babel-coloring
-      eamodio.gitlens
-      EditorConfig.EditorConfig
-      esbenp.prettier-vscode
-      ExodiusStudios.comment-anchors
-      fabiospampinato.vscode-todo-plus
-      firefox-devtools.vscode-firefox-debug
-      formulahendry.code-runner
-      foxundermoon.shell-format
-      fwcd.kotlin
-      golang.go
-      GraphQL.vscode-graphql
-      GraphQL.vscode-graphql-syntax
-      GulajavaMinistudio.mayukaithemevsc
-      hashicorp.hcl
-      hashicorp.terraform
-      hediet.debug-visualizer
-      JakeBecker.elixir-ls
-      jolaleye.horizon-theme-vscode
-      julialang.language-julia
-      kevinkyang.auto-comment-blocks
-      mateocerquetella.xcode-12-theme
-      mathiasfrohlich.Kotlin
-      minhthai.vscode-todo-parser
-      mjmcloug.vscode-elixir
-      ms-python.python
-      ms-python.vscode-pylance
-      ms-toolsai.jupyter
-      ms-toolsai.jupyter-keymap
-      ms-toolsai.jupyter-renderers
-      ms-toolsai.vscode-jupyter-cell-tags
-      ms-toolsai.vscode-jupyter-slideshow
-      ms-vscode.makefile-tools
-      ms-vscode.vscode-typescript-next
-      necinc.elmmet
-      octref.vetur
-      peterj.proto
-      PKief.material-icon-theme
-      plibither8.remove-comments
-      quicktype.quicktype
-      rebornix.ruby
-      redhat.vscode-commons
-      redhat.vscode-xml
-      rocketseat.theme-omni
-      rust-lang.rust
-      rust-lang.rust-analyzer
-      sbrink.elm
-      Shan.code-settings-sync
-      sleistner.vscode-fileutils
-      smockle.xcode-default-theme
-      streetsidesoftware.code-spell-checker
-      svelte.svelte-vscode
-      tamasfe.even-better-toml
-      tinkertrain.theme-panda
-      tsandall.opa
-      vadimcn.vscode-lldb
-      vscodevim.vim
-      wesbos.theme-cobalt2
-      wingrunr21.vscode-ruby
-      wmaurer.change-case
-      xaver.clang-format
-      yzhang.markdown-all-in-one
-      ZainChen.json
-      zxh404.vscode-proto3
-    ];
+    enable = true;
   };
 
   # NOTE: MANAGED MANUALLY, I DON'T LIKE THE WAY HOME-AMANGER MANAGING MY VIM CONFI

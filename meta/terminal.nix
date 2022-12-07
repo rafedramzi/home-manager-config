@@ -5,5 +5,6 @@
   pkgsUnstable.spaceship-prompt
   pkgsUnstable.zsh # TODO: Set default set for user
   pkgsUnstable.starship
+  pkgsUnstable.exa
 ]
 

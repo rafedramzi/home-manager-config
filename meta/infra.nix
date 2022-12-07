@@ -1,9 +1,10 @@
 { pkgs, pkgsUnstable, ... }:
 [
-    pkgsUnstable.boundary
-    pkgsUnstable.waypoint
-    pkgsUnstable.hey
-    pkgsUnstable.google-cloud-sdk
+  pkgsUnstable.boundary
+  pkgsUnstable.waypoint
+  pkgsUnstable.hey
+  pkgsUnstable.google-cloud-sdk
+  pkgsUnstable.cloudflared
 ]
 ++
 [
@@ -13,14 +14,40 @@
 # K8s
 [
   pkgsUnstable.krew
+  pkgsUnstable.clusterctl
   pkgsUnstable.stern
   pkgsUnstable.sonobuoy
   pkgsUnstable.fluxctl
   pkgsUnstable.kapp
   pkgsUnstable.kubernetes-helm
+] ++
+[
+  pkgsUnstable.glooctl
+  pkgsUnstable.istioctl
+  pkgsUnstable.snowcat
 ]
 ++
-# wasm
 [
-    pkgsUnstable.wasmtime
+  pkgsUnstable.cilium-cli
+  pkgsUnstable.hubble
+  pkgsUnstable.linkerd_edge
+]
+++
+[
+  pkgsUnstable.ignite
+  pkgsUnstable.gvisor
+  pkgsUnstable.gvproxy
+  pkgsUnstable.tun2socks
+]
+++
+[
+  pkgsUnstable.oras
+  pkgsUnstable.jsonnet
+  pkgsUnstable.jsonnet-bundler
+  pkgsUnstable.jsonnet-language-server
+]
+++
+  # wasm
+[
+  pkgsUnstable.wasmtime
 ]
