@@ -46,8 +46,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>go', vim.diagnostic.open_float, bufopts)
 
 
-  vim.keymap.set('n', 'gw', ':Telescope lsp_dynamic_workspace_symbols<cr>', bufopts)
-  vim.keymap.set('n', 'ge', ':Telescope lsp_document_symbols<cr>', bufopts)
+  -- just like kickstart nvim
+  -- https://github.com/nvim-lua/kickstart.nvim/blob/c73aefcb210125677aea9e62366c24beb0211b79/init.lua#L310
+  vim.keymap.set('n', 'ws', ':Telescope lsp_dynamic_workspace_symbols<cr>', bufopts)
+  vim.keymap.set('n', 'ds', ':Telescope lsp_document_symbols<cr>', bufopts)
 end
 
 -- Add additional capabilities supported by nvim-cmp

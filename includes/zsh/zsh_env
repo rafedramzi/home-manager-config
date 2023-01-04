@@ -1,4 +1,7 @@
 # 10ms for key sequences
+# TODO: refactor this, zu ugly
+XDG_DATA_DIRS=$HOME/.nix-profile/share:$XDG_DATA_DIRS
+
 KEYTIMEOUT=1
 HISTSIZE=500000
 SAVEHIST=500000

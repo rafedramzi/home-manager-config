@@ -1,12 +1,13 @@
 alias susr="systemctl --user"
-alias jusr="journalcyl --user"
+alias jusr="journalctl --user"
 alias rust-repl="evcxr"
 
 
-alias ls='exa -g'
-alias l='exa -lgahbF'
-alias ll='exa -lgbhF'
-alias llm='exa -algbF --sort=modified'
+alias ls=exa
+#alias ls='exa -g'
+#alias l='exa -lgahbF'
+#alias ll='exa -lgbhF'
+#alias llm='exa -algbF --sort=modified'
 alias la='ls -lgaFh'
 
 

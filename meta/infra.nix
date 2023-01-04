@@ -38,6 +38,7 @@
   pkgsUnstable.gvisor
   pkgsUnstable.gvproxy
   pkgsUnstable.tun2socks
+  pkgsUnstable.go-containerregistry
 ]
 ++
 [
@@ -50,4 +51,12 @@
   # wasm
 [
   pkgsUnstable.wasmtime
+]
+# supply chian
+++
+[
+  pkgsUnstable.syft
+  pkgsUnstable.grype
+  pkgsUnstable.trivy
+  pkgsUnstable.cosign
 ]

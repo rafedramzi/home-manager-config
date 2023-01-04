@@ -83,7 +83,7 @@ in
       # plugins = [ "key-bindings" ];
     };
     # zshrc
-    initExtra = "";
+    initExtra = "alias ls=exa";
     defaultKeymap = "emacs";
     # .zsh_env
     envExtra = "" +
@@ -98,6 +98,35 @@ in
       readFile ./includes/zsh/aliases/utils;
   };
 
+  services.polybar = {
+    enable = true;
+    package = (pkgs.callPackage pkgs.polybar.override ({
+      nlSupport = true;
+      mpdSupport = true;
+      i3Support = true;
+      alsaSupport = true;
+      iwSupport = true;
+      pulseSupport = true;
+      githubSupport = true;
+
+      # TODO: switch to uutils-coreutils :)
+      # TODO: find other way to put the coreutils as the depdnency
+    })).overrideAttrs (final: prev: {
+      buildInputs = prev.buildInputs ++ [ pkgsUnstable.coreutils ];
+    });
+    # TODO: fix this mess
+    extraConfig =
+      readFile ./includes/polybar/config +
+      readFile ./includes/polybar/global.conf +
+      readFile ./includes/polybar/bars/top.conf;
+    # handled by i3?
+    script = ''
+      MONITOR=eDP polybar -c ~/.config/polybar/config.ini top &
+      MONITOR=eDP-1-0 polybar -c ~/.config/polybar/config.ini top &
+      MONITOR=HDMI-0 polybar -c ~/.config/polybar/config.ini top &
+    '';
+  };
+
   programs.tmux = {
     enable = true;
     extraConfig = readFile ./includes/tmux/tmux.conf;
@@ -106,6 +135,7 @@ in
         plugin = tmuxPlugins.resurrect;
       }
     ];
+    keyMode = "vi";
   };
 
 
@@ -169,6 +199,12 @@ in
     };
     ".config/zathura/" = {
       source = ./includes/zathura;
+    };
+    ".config/polybar/quote.sh" = {
+      source = ./includes/polybar/quote.sh;
+    };
+    ".config/polybar/quotes.txt" = {
+      source = ./includes/polybar/quotes.txt;
     };
   };
 

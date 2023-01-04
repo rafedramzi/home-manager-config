@@ -30,6 +30,7 @@ font pango:monospace 10
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id setxkbmap -option 'ctrl:nocaps' # ctrl to caps
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xset r rate 300 45
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

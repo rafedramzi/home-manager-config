@@ -1,0 +1,365 @@
+#include-file = /home/pwyll/.config/polybar/global.conf
+#include-file = /home/pwyll/.config/polybar/bars/top.conf
+#include-file = /home/pwyll/.config/polybar/bars/bottom.conf
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+mount-1 = /home
+
+label-mounted =  %mountpoint%: %free%%
+label-unmounted = %mountpoint%: not mounted
+label-unmounted-foreground = ${colors.foreground}
+
+[module/i3]
+type = internal/i3
+
+format = <label-state>
+index-sort = true
+enable-click = true
+fuzzy-match = true
+wrapping-scroll = true
+strip-wsnumbers = true
+pin-workspaces = false
+
+label-focused = "%index%"
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.primary}
+label-focused-padding = 1
+label-focused-underline = #fff
+
+label-unfocused = "%index%"
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.secondary}
+label-unfocused-padding = 1
+label-unfocused-underline = ${colors.background}
+
+label-urgent = "%index%"
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
+label-urgent-underline = ${colors.background}
+
+label-visible = "%index%"
+label-visible-background = ${colors.background}
+label-visible-foreground = ${colors.primary}
+label-visible-padding = 1
+label-visible-underline = ${colors.primary}
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-default = 
+
+[module/mpd]
+type = internal/mpd
+
+host = localhost
+port = 6600
+interval = 1
+
+format-online = <label-song>
+
+label-song = "  %artist% - %title%"
+label-offline = mopidy is offline
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+icon-random = 
+icon-repeat = 
+
+toggle-on-foreground = ${colors.foreground}
+toggle-off-foreground = ${colors.foreground-alt}
+
+bar-progress-width = 30
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = >
+bar-progress-indicator-foreground = ${colors.foreground}
+bar-progress-fill = -
+bar-progress-fill-foreground = ${colors.foreground}
+bar-progress-empty = -
+bar-progress-empty-foreground = ${colors.foreground}
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 3.0
+
+format-connected = <label-connected>
+
+label-connected = "  %essid%   %signal%% "
+label-disconnected = " %ifname% off "
+
+ramp-signal-0 =" "
+ramp-signal-1 =" "
+ramp-signal-2 =" "
+ramp-signal-3 =" "
+ramp-signal-4 =" "
+
+label-connected-foreground = ${colors.secondary}
+label-disconnected-foreground = ${colors.alert}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%c"
+date-alt = "%d/%m/%y"
+#time =
+time-alt = %H:%M
+format-foreground = ${colors.foreground}
+label = %date% %time%
+
+
+
+[module/volume-bluetooth]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = bluez_sink.14_3F_A6_89_1F_7F.a2dp_sink
+
+format-volume = 🎧<label-volume><ramp-volume>
+format-muted-prefix = "🎧 "
+label-volume = "%percentage%"
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" "
+ramp-volume-3 =" "
+
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.alert}
+label-muted-foreground = ${colors.alert}
+
+[module/volume]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_05_00.6.analog-stereo
+
+format-volume = <label-volume><ramp-volume>
+label-volume = "%percentage%"
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" "
+ramp-volume-3 =" "
+format-muted-prefix = " "
+
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.alert}
+label-muted-foreground = ${colors.alert}
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AT0
+full-at = 98
+
+poll-interval = 5
+
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full = <ramp-capacity><label-full>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 650
+
+[module/ip]
+type = custom/script
+interval = 2
+format = "<label>"
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-background = ${colors.background-alt}
+exec = curl -sf4 ifconfig.co
+exec-if = ping -c 1 gentoo.org
+
+[module/hostname]
+type = custom/script
+interval = 256
+format = "<label> "
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-padding = 0
+format-background = ${colors.background}
+exec = echo "$(uname -n)"
+
+[module/temperature]
+type = internal/temperature
+format-foreground = ${colors.foreground}
+
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+
+; Thermal zone to use
+; To list all the zone types, run
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/class/hwmon/hwmon0/temp1_input
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 80
+
+; Whether or not to show units next to the temperature tokens (°C, °F)
+; Default: true
+units = false
+
+; Available tags:
+;   <label> (default)
+;   <ramp>
+format = "<label> "
+
+; Available tags:
+;   <label-warn> (default)
+;   <ramp>
+format-warn = "<label-warn> "
+
+; Available tokens:
+;   %temperature% (deprecated)
+;   %temperature-c%   (default, temperature in °C)
+;   %temperature-f%   (temperature in °F)
+label = " %temperature-c%"
+
+; Available tokens:
+;   %temperature% (deprecated)
+;   %temperature-c%   (default, temperature in °C)
+;   %temperature-f%   (temperature in °F)
+label-warn = " %temperature-c%"
+label-warn-foreground = #f00
+
+; Requires the <ramp> tag
+; The icon selection will range from 0 to `warn-temperature`,
+; temperatures above `warn-temperature` will use the last icon
+; and temperatures below 0°C will use `ramp-0`
+ramp-0 = A
+ramp-1 = B
+ramp-2 = C
+ramp-foreground = #55
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 2
+; Available tags:
+;   <label> (default)
+;   <bar-used>
+;   <bar-free>
+;   <ramp-used>
+;   <ramp-free>
+;   <bar-swap-used>
+;   <bar-swap-free>
+;   <ramp-swap-used>
+;   <ramp-swap-free>
+format = "<label> "
+
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+;   %percentage_swap_used%
+;   %percentage_swap_free%
+;   %mb_swap_total%
+;   %mb_swap_free%
+;   %mb_swap_used%
+;   %gb_swap_total%
+;   %gb_swap_free%
+;   %gb_swap_used%
+
+label = " %gb_used% / %gb_total%"
+
+
+; Only applies if <bar-used> is used
+bar-used-indicator =
+bar-used-width = 20
+bar-used-foreground-0 = ${colors.foreground}
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+; Only applies if <ramp-used> is used
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+; Only applies if <ramp-free> is used
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
+
+[module/weather]
+type = custom/script
+interval = 1800
+format = <label>
+format-padding = 1
+; format-suffix = "°C"
+format-prefix-foreground = ${colors.foreground-alt}
+format-background = ${colors.background}
+exec = ~/.dotfiles/i3/.i3/scripts/weather.sh -i
+
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+
+
+[module/quote]
+type = custom/script
+exec = ~/.config/polybar/quote.sh
+interval = 60
+; vim:ft=dosini

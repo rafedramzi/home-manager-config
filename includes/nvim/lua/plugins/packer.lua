@@ -366,7 +366,7 @@ return require('packer').startup(function()
         silent_chdir = false,
         show_hidden = true,
         detection_methods = { "pattern", "lsp" },
-        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", ".yarn" },
+        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", ".yarn", "Makefile", "makefile", "package.json", "go.mod" },
       }
     end
   }

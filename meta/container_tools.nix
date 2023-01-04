@@ -1,6 +1,8 @@
 { pkgs, pkgsUnstable, ... }:
 [
   pkgsUnstable.buildah
+  pkgsUnstable.buildkit
+  pkgsUnstable.buildkit-nix
   pkgsUnstable.podman
   pkgsUnstable.slirp4netns
   pkgsUnstable.dive
