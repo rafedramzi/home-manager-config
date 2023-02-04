@@ -1,0 +1,4 @@
+{ pkgs, pkgsUnstable, ... }:
+[
+  pkgsUnstable.glow
+]

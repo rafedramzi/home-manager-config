@@ -14,8 +14,8 @@ in
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "pwyll";
-  home.homeDirectory = "/home/pwyll";
+  home.username = "rafed";
+  home.homeDirectory = "/home/rafed";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -80,11 +80,11 @@ in
       # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/key-bindings.zsh
       # why enable full zsh then? laziness :D
       enable = true;
-      # plugins = [ "key-bindings" ];
+      #plugins = [ "key-bindings" ];
     };
     # zshrc
     initExtra = "alias ls=exa";
-    defaultKeymap = "emacs";
+    #defaultKeymap = "emacs";
     # .zsh_env
     envExtra = "" +
       readFile ./includes/zsh/envs/terminalrc +
@@ -210,6 +210,7 @@ in
 
   home.packages = [ ]
     ++ import ./meta/container_tools.nix importDeps
+    ++ import ./meta/cli_tools.nix importDeps
     ++ import ./meta/desktop.nix importDeps
     ++ import ./meta/dev_tools.nix importDeps
     ++ import ./meta/fun_tools.nix importDeps
@@ -227,6 +228,7 @@ in
     enableXsessionIntegration = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    keys = [ "id_rsa" "id_ed25519" ];
   };
   xsession = {
     enable = true;

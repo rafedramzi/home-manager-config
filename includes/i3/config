@@ -51,7 +51,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
-bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
+bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
 bindsym $mod+Tab workspace back_and_forth
 
 # kill focused window

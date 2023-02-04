@@ -44,11 +44,18 @@
   pkgsUnstable.protoc-gen-twirp_swagger
 ] ++
 [
-  pkgsUnstable.gofumpt
+  pkgsUnstable.zig
 ]
 ++
 [
-  #pkgsUnstable.neovide
+  pkgsUnstable.go
+  pkgsUnstable.gofumpt
+  pkgsUnstable.gox
+]
+++
+[
+  pkgsUnstable.neovide
+  pkgsUnstable.neovim-qt
   #pkgsUnstable.neovim
 ] ++ [
   pkgsUnstable.buildpack

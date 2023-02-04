@@ -10,6 +10,9 @@ setopt SHARE_HISTORY
 
 bindkey '\ef' emacs-forward-word
 bindkey '\eb' emacs-backward-word
+# TODO: this is a hack, somehow some terminal movement don't work with if we don't use this
+# NOTE: figure out whyyyyy :(
+export TERM=xterm-256color
 # NOTE: if things don't work as expected, make sure you set the defualt keymap to emacs
 #
 # create a zkbd compatible hash;

@@ -14,5 +14,8 @@
   pkgsUnstable.kind
   pkgsUnstable.nerdctl
   pkgsUnstable.kube-linter
+  pkgsUnstable.lima
+  pkgsUnstable.colima
+  pkgsUnstable.kubectx
 ]
 

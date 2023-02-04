@@ -59,4 +59,8 @@
   pkgsUnstable.grype
   pkgsUnstable.trivy
   pkgsUnstable.cosign
+  pkgsUnstable.kubectl
+  pkgsUnstable.awscli
+  pkgsUnstable.aws-vault
+  pkgsUnstable.saml2aws
 ]
