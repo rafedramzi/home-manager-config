@@ -1,0 +1,32 @@
+# Apply this configuration to two keyboards (if connected)
+- keyboards: [ "Lenovo TrackPoint Keyboard II", "AT Translated Set 2 keyboard"]
+
+  keymap:
+    capslock: fn_2
+    #leftalt: leftctrl
+    #sysrq: rightmeta
+  # Specify layered configurations (much similar to fn+F keys)
+  layers:
+    # Specify the modifiers of the layer
+    - modifiers: ['fn_2']
+      keymap:
+        i: up
+        j: left
+        k: down
+        l: right
+        u: pageup
+        o: pagedown
+        p: home
+        1: f1
+        2: f2
+        3: f3
+        4: f4
+        5: f5
+        6: f6
+        7: f7
+        8: f8
+        9: f9
+        10: f10
+        11: f11
+        12: f12
+        semicolon: end

@@ -23,7 +23,9 @@
   - [ ]     [ ]             local-systemd
   - [ ]     [ ]             x11/
   - [ ]     [ ]             xresources/
+  - [ ]     [ ]             kbct/
 - tidy up alias, make sure it adhere to community standard
 - ports aur installed packages to home-manager
 - ports pacman installed packges to home-mangaer
 - find ways to configure /etc/systemd things
+
