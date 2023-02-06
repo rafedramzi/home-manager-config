@@ -87,7 +87,7 @@ return require('packer').startup({
     -- use { 'mhinz/vim-startify' } -- splash screen, cowsay
     use {
       'goolord/alpha-nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' },
+      requires = { 'nvim-tree/nvim-web-devicons' },
       config = function()
         require 'alpha'.setup(require 'alpha.themes.startify'.config)
       end
@@ -166,12 +166,12 @@ return require('packer').startup({
     --     -- your statusline
     --     config = function() require'plugins.config.galaxyline' end,
     --     -- some optional icons
-    --     requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    --     requires = {'nvim-tree/nvim-web-devicons', opt = true}
     -- }
     use 'feline-nvim/feline.nvim'
     use {
       "folke/trouble.nvim",
-      requires = "kyazdani42/nvim-web-devicons",
+      requires = "nvim-tree/nvim-web-devicons",
       config = function()
         require("trouble").setup {
           -- your configuration comes here
@@ -300,7 +300,7 @@ return require('packer').startup({
     -- Others
     use {
       'romgrk/barbar.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' },
+      requires = { 'nvim-tree/nvim-web-devicons' },
       config = function()
         vim.api.nvim_create_autocmd('BufWinEnter', {
           pattern = '*',

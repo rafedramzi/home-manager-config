@@ -248,7 +248,7 @@ exec --no-startup-id /usr/bin/gnome-screensaver
 #exec --no-startup-id variety
 exec --no-startup-id ~/.fehbg
 # NOTE: we're disabling the compositor, it's making things slow....
-#exec --no-startup-id picom
+exec --no-startup-id picom
 #exec --no-startup-id xcompmgr
 
 
